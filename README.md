@@ -12,6 +12,24 @@ wget https://raw.githubusercontent.com/rix4uni/ip2org/main/ip2org.go && go build
 
 # Usage
 ```
+  -ip string
+        IP address to lookup
+  -list string
+        File containing IP addresses
+  -o string
+        File to save output
+  -reverse
+        Perform reverse DNS lookup
+  -timeout int
+        Timeout for whois lookup in seconds (default 10)
+  -verbose
+        Enable verbose mode
+  -version
+        print version information and exit
+```
+
+# Usage Example
+```
 echo "209.237.150.21" | ip2org
 cat ips.txt | ip2org
 
