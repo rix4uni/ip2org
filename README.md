@@ -1,16 +1,26 @@
-# ip2org
+## ip2org
 
-# Installation
+## Installation
 ```
 go install github.com/rix4uni/ip2org@latest
 ```
 
-##### via clone command
+## Download prebuilt binaries
 ```
-wget https://raw.githubusercontent.com/rix4uni/ip2org/main/ip2org.go && go build ip2org.go && mv ip2org ~/go/bin/ip2org && rm -rf ip2org.go
+wget https://github.com/rix4uni/ip2org/releases/download/v0.0.1/ip2org-linux-amd64-0.0.1.tgz
+tar -xvzf ip2org-linux-amd64-0.0.1.tgz
+rm -rf ip2org-linux-amd64-0.0.1.tgz
+mv ip2org ~/go/bin/ip2org
+```
+Or download [binary release](https://github.com/rix4uni/ip2org/releases) for your platform.
+
+## Compile from source
+```
+git clone --depth 1 github.com/rix4uni/ip2org.git
+cd ip2org; go install
 ```
 
-# Usage
+## Usage
 ```
   -ip string
         IP address to lookup
@@ -28,7 +38,7 @@ wget https://raw.githubusercontent.com/rix4uni/ip2org/main/ip2org.go && go build
         print version information and exit
 ```
 
-# Usage Example
+## Usage Example
 ```
 echo "209.237.150.21" | ip2org
 cat ips.txt | ip2org
@@ -36,7 +46,7 @@ cat ips.txt | ip2org
 shodan parse --fields ip_str --separator ":" *.json.gz | unew | ip2org
 ```
 
-# Output
+## Output
 ```
 209.237.150.21 [Web.com Group, Inc.]
 ```
